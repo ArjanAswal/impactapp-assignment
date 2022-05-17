@@ -1,0 +1,24 @@
+{
+  "name": "impactapp-assignment",
+  "version": "1.0.0",
+  "description": "Impact App Assignment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArjanAswal/impactapp-assignment.git"
+  },
+  "author": "Arjan Aswal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ArjanAswal/impactapp-assignment/issues"
+  },
+  "homepage": "https://github.com/ArjanAswal/impactapp-assignment#readme",
+  "dependencies": {
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.19.1"
+  }
+}
