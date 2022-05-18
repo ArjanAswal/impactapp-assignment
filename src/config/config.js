@@ -1,3 +1,5 @@
+require('dotenv').config(); // this is important!
+
 module.exports = {
   development: {
     username: process.env.POSTGRES_USER ?? 'postgres',
