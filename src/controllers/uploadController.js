@@ -43,7 +43,7 @@ exports.parse = async (req, res, next) => {
   await Student.bulkCreate(data);
   const students = await Student.findAll();
 
-  res.status(200).json({
+  res.status(201).json({
     status: 'success',
     data: {
       students,

@@ -13,12 +13,49 @@ module.exports = (sequelize, DataTypes) => {
   }
   Student.init(
     {
-      name: DataTypes.STRING,
-      age: DataTypes.DOUBLE,
-      mark1: DataTypes.DOUBLE,
-      mark2: DataTypes.DOUBLE,
-      mark3: DataTypes.DOUBLE,
-      average: DataTypes.DOUBLE,
+      name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      age: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        validate: {
+          min: 0,
+        },
+      },
+      mark1: {
+        type: DataTypes.DOUBLE,
+        allowNull: false,
+        validate: {
+          min: 0,
+          max: 100,
+        },
+      },
+      mark2: {
+        type: DataTypes.DOUBLE,
+        allowNull: false,
+        validate: {
+          min: 0,
+          max: 100,
+        },
+      },
+      mark3: {
+        type: DataTypes.DOUBLE,
+        allowNull: false,
+        validate: {
+          min: 0,
+          max: 100,
+        },
+      },
+      average: {
+        type: DataTypes.DOUBLE,
+        allowNull: false,
+        validate: {
+          min: 0,
+          max: 100,
+        },
+      },
     },
     {
       sequelize,
