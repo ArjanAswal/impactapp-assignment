@@ -25,3 +25,24 @@ exports.getStudents = async (req, res, next) => {
     },
   });
 };
+
+exports.getStudentResults = async (req, res, next) => {
+  const { id } = req.params;
+  if (!id) {
+    throw new AppError('Please provide a valid id', 400);
+  }
+  const student = await Student.findOne({
+    where: { id },
+  });
+
+  if (!student) {
+    throw new AppError('No student found with the given id', 404);
+  }
+
+  res.status(200).json({
+    status: 'success',
+    data: {
+      student,
+    },
+  });
+};
