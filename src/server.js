@@ -1,6 +1,6 @@
 const app = require('./app');
 const logger = require('./utils/logger');
-const db = require('./models');
+const { sequelize } = require('./models');
 
 process.on('uncaughtException', (err) => {
   logger.error('UNCAUGHT EXCEPTION! 💥 Shutting down...');
@@ -11,7 +11,7 @@ process.on('uncaughtException', (err) => {
 const port = process.env.PORT ?? 80;
 const server = app.listen(port, async () => {
   try {
-    await db.sequelize.authenticate();
+    await sequelize.authenticate();
     logger.info('Connection has been established successfully.');
   } catch (error) {
     logger.error('Unable to connect to the database:', error);

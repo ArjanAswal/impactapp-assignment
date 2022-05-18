@@ -8,6 +8,7 @@ require('express-async-errors');
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
 const uploadRouter = require('./routes/uploadRouter');
+const studentRouter = require('./routes/studentRouter');
 
 const app = express();
 
@@ -41,6 +42,7 @@ app.use(compression());
 
 // App Routes
 app.use('/upload', uploadRouter);
+app.use('/students', studentRouter);
 
 app.all('*', (req) => {
   throw new AppError(`Can't find ${req.originalUrl} on this server!`, 404);

@@ -18,6 +18,7 @@ module.exports = (sequelize, DataTypes) => {
       mark1: DataTypes.DOUBLE,
       mark2: DataTypes.DOUBLE,
       mark3: DataTypes.DOUBLE,
+      average: DataTypes.DOUBLE,
     },
     {
       sequelize,

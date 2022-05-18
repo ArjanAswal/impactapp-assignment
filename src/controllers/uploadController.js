@@ -25,7 +25,22 @@ exports.parse = async (req, res, next) => {
   const textChunk = req.file.buffer.toString('utf8');
   const json = await csvtojson().fromString(textChunk);
 
-  await Student.bulkCreate(json);
+  const data = json.map((student) => {
+    return {
+      name: student.name,
+      age: Number(student.age),
+      mark1: Number(student.mark1),
+      mark2: Number(student.mark2),
+      mark3: Number(student.mark3),
+      average:
+        (Number(student.mark1) +
+          Number(student.mark2) +
+          Number(student.mark3)) /
+        3,
+    };
+  });
+
+  await Student.bulkCreate(data);
   const students = await Student.findAll();
 
   res.status(200).json({

@@ -23,6 +23,9 @@ module.exports = {
       mark3: {
         type: Sequelize.DOUBLE,
       },
+      average: {
+        type: Sequelize.DOUBLE,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
