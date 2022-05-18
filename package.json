@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Impact App Assignment",
   "main": "index.js",
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "scripts": {
     "start": "./node_modules/nodemon/bin/nodemon.js src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
