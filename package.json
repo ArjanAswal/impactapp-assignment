@@ -17,8 +17,28 @@
   },
   "homepage": "https://github.com/ArjanAswal/impactapp-assignment#readme",
   "dependencies": {
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "eslint": "^8.15.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jest": "^26.2.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-security": "^1.5.0",
+    "express": "^4.18.1",
+    "express-async-errors": "^3.1.1",
+    "express-rate-limit": "^6.4.0",
+    "helmet": "^5.1.0",
+    "jest": "^28.1.0",
+    "nodemon": "^2.0.16",
     "pg": "^8.7.3",
     "pg-hstore": "^2.3.4",
-    "sequelize": "^6.19.1"
+    "sequelize": "^6.19.1",
+    "supertest": "^6.2.3",
+    "winston": "^3.7.2",
+    "xss-clean": "^0.1.1"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.4.1"
   }
 }
